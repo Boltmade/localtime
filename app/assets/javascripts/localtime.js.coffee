@@ -1,6 +1,9 @@
+//= require moment
+//= require moment-strftime-0.1.2
+
 $ ->
   $('time[data-strftime]').each ->
-    datetime = Date.parse $(this).attr 'datetime'
+    datetime = moment $(this).attr 'datetime'
     strftime = $(this).data 'strftime'
 
-    $(this).text(datetime.format strftime)
+    $(this).text(datetime.strftime strftime)
