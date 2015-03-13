@@ -1,6 +1,7 @@
 # Localtime
 
-TODO: Write a gem description
+Want to display all your time in the user's local time? Of course you do. Use
+localtime!
 
 ## Installation
 
@@ -20,7 +21,26 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Localtime is a super simple gem that just takes time tags on your page, reads
+the strftime attribute if there is one, and updates the text with the user's
+local time.
+
+Use it like this:
+
+``` erb
+<%= localtime DateTime.now %>
+```
+
+Want to pass it some formatting options? Use strftime:
+
+``` erb
+<%= localtime DateTime.now, "%Y-%m-%d %H:%M" %>
+```
+
+`%Y-%m-%d %H:%M` is the default that will be used if you do not specify
+anything.
+
+Enjoy!
 
 ## Contributing
 
